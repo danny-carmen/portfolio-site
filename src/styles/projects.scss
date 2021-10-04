@@ -1,0 +1,54 @@
+.projects-page {
+  height: 100%;
+  width: 100%;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.project {
+  background-color: gray;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 300px;
+  width: 66%;
+  display: grid;
+  grid-template-columns: [img-s] 300px [img-e info-s] 1fr [info-e];
+  grid-template-rows: [top name-s] max-content [name-e github-s] max-content [github-e link-s] max-content [link-e description-s] max-content [description-e language-s] max-content [language-e bottom];
+  &--image {
+    grid-column: img-s/img-e;
+    grid-row: top/bottom;
+  }
+  &--name {
+    grid-column: info-s/info-e;
+    grid-row: name-s/name-e;
+  }
+  &--description {
+    grid-column: info-s/info-e;
+    grid-row: description-s/description-e;
+  }
+  &--github {
+    grid-column: info-s/info-e;
+    grid-row: github-s/github-e;
+  }
+  &--link {
+    grid-column: info-s/info-e;
+    grid-row: link-s/link-e;
+  }
+  &--icons {
+    grid-column: img-s/img-e;
+    grid-row: top/bottom;
+    align-self: flex-start;
+    justify-self: flex-end;
+    z-index: 1;
+  }
+  &--languages {
+    grid-column: info-s/info-e;
+    grid-row: languages-s/languages-e;
+  }
+}

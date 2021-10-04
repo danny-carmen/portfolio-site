@@ -1,0 +1,23 @@
+@import "./variables.scss";
+@import "./nav-bar.scss";
+@import "./home.scss";
+@import "./contact.scss";
+@import "./about-me.scss";
+@import "./projects.scss";
+@import "./media-queries.scss";
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: [navbar-s] max-content [navbar-e content-s] 1fr [content-e];
+}
