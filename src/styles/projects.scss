@@ -1,14 +1,14 @@
 .projects-page {
-  height: 100%;
-  width: 100%;
+  display: flex;
+  width: 1fr;
 }
 
 .projects-wrapper {
+  padding-top: 30vh;
+  padding-bottom: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  width: 100%;
 }
 
 .project {
@@ -16,29 +16,38 @@
   margin-top: 15px;
   margin-bottom: 15px;
   height: 300px;
-  width: 66%;
+  width: 75%;
   display: grid;
   grid-template-columns: [img-s] 300px [img-e info-s] 1fr [info-e];
-  grid-template-rows: [top name-s] max-content [name-e github-s] max-content [github-e link-s] max-content [link-e description-s] max-content [description-e language-s] max-content [language-e bottom];
+  grid-template-rows: [top] 1fr [bottom];
+  color: lightgray;
+
   &--image {
     grid-column: img-s/img-e;
     grid-row: top/bottom;
+    height: 300px;
+    width: 300px;
+    object-fit: fill;
   }
-  &--name {
+
+  &--info-wrapper {
     grid-column: info-s/info-e;
-    grid-row: name-s/name-e;
+    grid-row: top/bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  &--name {
   }
   &--description {
-    grid-column: info-s/info-e;
-    grid-row: description-s/description-e;
   }
   &--github {
-    grid-column: info-s/info-e;
-    grid-row: github-s/github-e;
   }
   &--link {
-    grid-column: info-s/info-e;
-    grid-row: link-s/link-e;
   }
   &--icons {
     grid-column: img-s/img-e;
@@ -48,7 +57,5 @@
     z-index: 1;
   }
   &--languages {
-    grid-column: info-s/info-e;
-    grid-row: languages-s/languages-e;
   }
 }

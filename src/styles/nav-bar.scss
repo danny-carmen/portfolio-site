@@ -1,10 +1,10 @@
 .nav-bar-wrapper {
   grid-column: navbar-s/navbar-e;
-  display: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   justify-content: center;
-
+  top: 0;
   background-color: $primary-color;
-
   align-items: center;
   height: 100vh;
 }

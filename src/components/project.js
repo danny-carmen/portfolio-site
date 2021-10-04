@@ -6,7 +6,7 @@ const Project = (props) => {
     <div className="project">
       <img
         className="project--image"
-        src="https://via.placeholder.com/300"
+        src={props.project.image}
         alt={props.project.name}
       />
       <Icons className="project--icons" icons={props.project.icons} />
@@ -17,7 +17,9 @@ const Project = (props) => {
         </div>
         <div className="project--link">Link to Site: {props.project.link}</div>
         <div className="project--description">{props.project.description}</div>
-        <div className="project--languages">{props.project.languages}</div>
+        <div className="project--languages">
+          Languages: {props.project.languages}
+        </div>
       </div>
     </div>
   );
