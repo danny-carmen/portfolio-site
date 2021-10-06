@@ -21,3 +21,39 @@ body,
   display: grid;
   grid-template-columns: [navbar-s] max-content [navbar-e content-s] 1fr [content-e];
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.page {
+  transition: all 0.5s ease-in-out;
+}
+
+.transparent {
+  opacity: 0;
+
+  * {
+    opacity: 0;
+  }
+}
+
+.opaque {
+}

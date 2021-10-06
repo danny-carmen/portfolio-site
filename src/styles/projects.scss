@@ -1,54 +1,73 @@
 .projects-page {
   display: flex;
   width: 1fr;
+  //   background-color: lightgray;
+  background-color: white;
 }
 
 .projects-wrapper {
-  padding-top: 30vh;
-  padding-bottom: 30vh;
+  //   padding-top: 25vh;
+  //   padding-bottom: 25vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .project {
-  background-color: gray;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  height: 300px;
+  border-radius: 1.5rem;
+  background-color: white;
+  //   background-color: lightgray;
+  //   border: 1px solid $primary-color;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 400px;
   width: 75%;
   display: grid;
-  grid-template-columns: [img-s] 300px [img-e info-s] 1fr [info-e];
+  grid-template-columns: [img-s] 400px [img-e info-s] 1fr [info-e];
   grid-template-rows: [top] 1fr [bottom];
-  color: lightgray;
+  color: gray;
+  font-size: 1.25rem;
 
   &--image {
     grid-column: img-s/img-e;
     grid-row: top/bottom;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
+    border-radius: 1.5rem 0px 0px 1.5rem;
+
     object-fit: fill;
   }
 
   &--info-wrapper {
     grid-column: info-s/info-e;
     grid-row: top/bottom;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    row-gap: 10px;
+    display: grid;
+    height: 400px;
+    grid-template-rows: [top name-s] max-content [name-e links-s] max-content [link-e description-s] 1fr [description-e language-s] min-content [language-e bottom];
     margin-left: 15px;
-    margin-top: 8px;
+
     margin-bottom: 8px;
   }
 
   &--name {
+    font-size: 1.75rem;
+    margin-top: 8px;
   }
   &--description {
+    overflow-y: scroll;
+    align-content: center;
   }
   &--github {
+    margin-right: 20px;
   }
-  &--link {
+
+  &--links {
+    display: flex;
   }
+
   &--icons {
     grid-column: img-s/img-e;
     grid-row: top/bottom;
@@ -57,5 +76,33 @@
     z-index: 1;
   }
   &--languages {
+    margin-bottom: 8px;
   }
+}
+
+.project--link {
+  height: 2rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  background-color: gray;
+  color: lightgray;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.link-divider-line {
+  border-right: 2px solid gray;
+  height: 100%;
+  width: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.neumorphic {
+  //   box-shadow: -3px -3px 2px 2px rgb(221, 220, 214),
+  //     3px 3px 2px 2px rgb(133, 131, 127), 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
 }

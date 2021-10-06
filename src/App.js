@@ -13,9 +13,9 @@ function App() {
         <div className="main-grid">
           <NavBar />
           <Switch>
-            <Route exact path="/" component={Home} />
+            {/* <Route exact path="/" component={Home} /> */}
             <Route path="/projects" component={Projects} />
-            <Route path="/about-me" component={AboutMe} />
+            <Route exact path="/" component={AboutMe} />
             <Route path="/contact" component={Contact} />
           </Switch>
         </div>

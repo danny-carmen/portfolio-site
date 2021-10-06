@@ -1,0 +1,24 @@
+.contact-page-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+
+  * {
+    color: gray;
+  }
+
+  &--links {
+    display: flex;
+    gap: 20px;
+  }
+}
