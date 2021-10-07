@@ -3,38 +3,57 @@
   width: 1fr;
   //   background-color: lightgray;
   background-color: white;
+  position: relative;
+  height: 100%;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.background-image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.project-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 
 .projects-wrapper {
-  //   padding-top: 25vh;
-  //   padding-bottom: 25vh;
+  z-index: 1;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .project {
   border-radius: 1.5rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
   //   background-color: lightgray;
   //   border: 1px solid $primary-color;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 500px;
   width: 75%;
   display: grid;
-  grid-template-columns: [img-s] 400px [img-e info-s] 1fr [info-e];
+  grid-template-columns: [img-s] 500px [img-e info-s] 1fr [info-e];
   grid-template-rows: [top] 1fr [bottom];
   color: gray;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
 
   &--image {
     grid-column: img-s/img-e;
     grid-row: top/bottom;
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     border-radius: 1.5rem 0px 0px 1.5rem;
 
     object-fit: fill;
@@ -43,22 +62,23 @@
   &--info-wrapper {
     grid-column: info-s/info-e;
     grid-row: top/bottom;
-    row-gap: 10px;
+    row-gap: 20px;
     display: grid;
-    height: 400px;
-    grid-template-rows: [top name-s] max-content [name-e links-s] max-content [link-e description-s] 1fr [description-e language-s] min-content [language-e bottom];
-    margin-left: 15px;
-
-    margin-bottom: 8px;
+    height: 500px;
+    background-color: transparent;
+    grid-template-rows: [top name-s] 1fr [name-e links-s] 1fr [link-e description-s] 4fr [description-e language-s] min-content [language-e bottom];
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   &--name {
     font-size: 1.75rem;
-    margin-top: 8px;
+    margin-top: 30px;
   }
   &--description {
-    overflow-y: scroll;
     align-content: center;
+    align-self: center;
+    text-align: justify;
   }
   &--github {
     margin-right: 20px;
@@ -76,7 +96,7 @@
     z-index: 1;
   }
   &--languages {
-    margin-bottom: 8px;
+    margin-bottom: 30px;
   }
 }
 
@@ -94,7 +114,7 @@
 
 .link-divider-line {
   border-right: 2px solid gray;
-  height: 100%;
+  height: 2.5rem;
   width: 1px;
   margin-left: 10px;
   margin-right: 10px;
@@ -104,5 +124,5 @@
   //   box-shadow: -3px -3px 2px 2px rgb(221, 220, 214),
   //     3px 3px 2px 2px rgb(133, 131, 127), 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
 
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.15);
 }
