@@ -46,7 +46,7 @@
   display: grid;
   grid-template-columns: [img-s] 500px [img-e info-s] 1fr [info-e];
   grid-template-rows: [top] 1fr [bottom];
-  color: gray;
+  color: $font-color;
   font-size: 1.375rem;
 
   &--image {
@@ -104,7 +104,7 @@
   height: 2rem;
   border-radius: 1.5rem;
   text-decoration: none;
-  background-color: gray;
+  background-color: $font-color;
   color: lightgray;
   padding-left: 10px;
   padding-right: 10px;

@@ -60,7 +60,7 @@
   &--text-wrapper {
     border-radius: 1.5rem;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
     display: grid;
   }
@@ -73,6 +73,7 @@
     grid-column: s/m2;
     grid-row: m/e;
     align-items: center;
+    color: $font-color;
     text-align: justify;
     font-size: 1.5rem;
   }

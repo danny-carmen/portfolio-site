@@ -20,7 +20,11 @@ const Project = (props) => {
           {props.project.github ? (
             <div className="link-divider-line"> </div>
           ) : null}
-          <a className="project--link" href={props.project.link}>
+          <a
+            className="project--link"
+            href={props.project.link}
+            target="_blank"
+          >
             {`Visit ${props.project.linkName}`}
           </a>
         </div>

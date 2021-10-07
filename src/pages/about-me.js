@@ -68,7 +68,8 @@ const AboutMe = () => {
             working on programming projects. I was drawn to coding for many of
             the same reasons as architecture, design, creative problem solving,
             working within limitations. I decided it was time to make a change
-            and pursue my passion <br />
+            and pursue my passion.
+            <br />
             <br />I recently completed a boot camp through Bottega University,
             and I am currently looking for a junior position. I am excited to
             bring value through my unique experiences as an architect turned
