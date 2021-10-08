@@ -2,7 +2,7 @@
   $primary-dimension: 75vw;
   .about-me {
     width: 100%;
-    grid-template-rows: 20px [image-s] $primary-dimension [image-e intro-s] max-content [intro-e secondary-s] $primary-dimension [secondary-e info-s] max-content [info-e] 50px;
+    grid-template-rows: 20px [image-s] $primary-dimension [image-e intro-s] max-content [intro-e secondary-s] $primary-dimension [secondary-e info-s] max-content [info-e] 90px;
     grid-template-columns: 1fr [s] $primary-dimension [e] 1fr;
     gap: 30px;
 
