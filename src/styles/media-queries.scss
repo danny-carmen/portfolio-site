@@ -127,8 +127,8 @@
     background-color: rgba(255, 255, 255, 0.75);
     //   background-color: lightgray;
     //   border: 1px solid $primary-color;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 24px;
+    margin-bottom: 25px;
     height: auto;
     width: $primary-dimension;
     display: grid;
@@ -165,6 +165,7 @@
     &--name {
       font-size: 1.5rem;
       margin-top: 2vw;
+      text-align: center;
     }
     &--description {
       align-content: center;
