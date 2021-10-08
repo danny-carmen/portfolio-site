@@ -41,8 +41,8 @@
 
   .nav-bar-wrapper {
     grid-row: navbar-s/navbar-e;
-    position: absolute;
-    position: -webkit-sticky;
+    position: fixed;
+
     top: 0;
     width: 100vw;
     height: 7vw;
@@ -50,6 +50,7 @@
   }
 
   .nav-bar {
+    transform: translate3d(0, 0, 0);
     height: 100%;
     width: 100%;
     display: flex;
