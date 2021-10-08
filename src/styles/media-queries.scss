@@ -178,6 +178,8 @@
 
     &--links {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     &--icons {
@@ -203,11 +205,12 @@
     padding-right: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
+    text-align: center;
   }
 
   .link-divider-line {
-    border-right: 2px solid gray;
-    height: 2.5rem;
+    border-right: none;
+    height: 10px;
     width: 1px;
     margin-left: 10px;
     margin-right: 10px;
