@@ -30,34 +30,36 @@ const Projects = () => {
 
   const fadeBackground = () => {
     const projectScroll = projectScrollRef.current;
-    const scrollDivision =
-      (projectScroll.scrollHeight - projectScroll.offsetHeight) /
-        backgroundImages.length +
-      0.5;
-    const scrollIndexPosition = Math.floor(
-      projectScroll.scrollTop / scrollDivision
-    );
+    if (projectScroll.scrollTop > 0) {
+      const scrollDivision =
+        (projectScroll.scrollHeight - projectScroll.offsetHeight) /
+          backgroundImages.length +
+        0.5;
+      const scrollIndexPosition = Math.floor(
+        projectScroll.scrollTop / scrollDivision
+      );
 
-    console.log(scrollIndexPosition);
+      console.log(scrollIndexPosition);
 
-    if (
-      scrollIndexPosition !== image1Index &&
-      scrollIndexPosition < backgroundImages.length - 1
-    ) {
-      console.log("Changed Image");
-      setImage1Index(scrollIndexPosition);
-      setImage2Index(scrollIndexPosition + 1);
-    }
-    if (scrollIndexPosition < backgroundImages.length - 1) {
-      setImage1Opacity(
-        maxImageOpacity -
+      if (
+        scrollIndexPosition !== image1Index &&
+        scrollIndexPosition < backgroundImages.length - 1
+      ) {
+        console.log("Changed Image");
+        setImage1Index(scrollIndexPosition);
+        setImage2Index(scrollIndexPosition + 1);
+      }
+      if (scrollIndexPosition < backgroundImages.length - 1) {
+        setImage1Opacity(
+          maxImageOpacity -
+            ((projectScroll.scrollTop % scrollDivision) / scrollDivision) *
+              maxImageOpacity
+        );
+        setImage2Opacity(
           ((projectScroll.scrollTop % scrollDivision) / scrollDivision) *
             maxImageOpacity
-      );
-      setImage2Opacity(
-        ((projectScroll.scrollTop % scrollDivision) / scrollDivision) *
-          maxImageOpacity
-      );
+        );
+      }
     }
   };
 
