@@ -13,7 +13,11 @@ const Project = (props) => {
         <div className="project--name">{props.project.name}</div>
         <div className="project--links">
           {props.project.github ? (
-            <a className="project--link" href={props.project.github}>
+            <a
+              className="project--link"
+              href={props.project.github}
+              target="_blank"
+            >
               Github Repository
             </a>
           ) : null}

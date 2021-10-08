@@ -30,7 +30,7 @@ $primary-dimension: 30vw;
   //   padding-bottom: 20vh;
   //   padding-top: 50px;
   //   padding-bottom: 50px;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
@@ -101,6 +101,6 @@ $primary-dimension: 30vw;
   margin-bottom: 0px;
   margin-left: px;
   background-clip: text;
-  z-index: 2;
+  z-index: 1;
   color: $primary-color;
 }

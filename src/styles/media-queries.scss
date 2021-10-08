@@ -59,16 +59,20 @@
 
     flex-direction: row;
     z-index: 3;
-    font-size: 2rem;
+    font-size: 5vw;
 
     &--link {
       writing-mode: horizontal-tb;
+      height: 100%;
       margin-bottom: 0px;
       transform: none;
-      line-height: 0;
+      line-height: 6vw;
       z-index: 3;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      padding-top: 0px;
+      padding-bottom: 0px;
       text-decoration: none;
 
       color: white;
@@ -126,13 +130,15 @@
     //   border: 1px solid $primary-color;
     margin-top: 50px;
     margin-bottom: 50px;
-    height: initial;
+    height: auto;
     width: $primary-dimension;
     display: grid;
     grid-template-columns: [s] $primary-dimension [e];
-    grid-template-rows: [img-s] $primary-dimension [img-e info-s] 700px [info-e];
+    grid-template-rows:
+      [img-s] $primary-dimension [img-e info-s] max-content
+      [info-e];
     color: $font-color;
-    font-size: 1.25rem;
+    font-size: 1rem;
 
     &--image {
       grid-row: img-s/img-e;
@@ -149,21 +155,23 @@
       grid-column: s/e;
       row-gap: 20px;
       display: grid;
-      height: $primary-dimension;
+      height: max-content;
       background-color: transparent;
-      grid-template-rows: [top name-s] 1fr [name-e links-s] 1fr [link-e description-s] 4fr [description-e language-s] min-content [language-e bottom];
+      grid-template-rows: [top name-s] max-content [name-e links-s] max-content [link-e description-s] max-content [description-e language-s] min-content [language-e bottom];
+      //   flex-direction: column;
       margin-left: 30px;
       margin-right: 30px;
     }
 
     &--name {
       font-size: 1.5rem;
-      margin-top: 1vw;
+      margin-top: 2vw;
     }
     &--description {
       align-content: center;
       align-self: center;
       text-align: justify;
+      height: max-content;
     }
     &--github {
       margin-right: 20px;
@@ -204,5 +212,9 @@
     width: 1px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .contact-page {
+    font-size: 1.5rem;
   }
 }
