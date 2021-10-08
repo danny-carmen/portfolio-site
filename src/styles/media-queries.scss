@@ -37,6 +37,7 @@
     height: 100%;
     display: grid;
     grid-template-rows: [navbar-s] 7vw [navbar-e content-s] 1fr [content-e];
+    overflow-x: hidden;
   }
 
   .nav-bar-wrapper {
