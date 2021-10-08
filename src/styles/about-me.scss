@@ -1,3 +1,5 @@
+$primary-dimension: 30vw;
+
 .about-me-page {
   display: flex;
   justify-content: center;
@@ -34,8 +36,8 @@
   overflow-y: scroll;
   display: grid;
 
-  grid-template-rows: 100px [s] 600px [m] 600px [e] 100px;
-  grid-template-columns: 100px [s] 600px [m1] 1fr [m2] 600px [e]100px;
+  grid-template-rows: 100px [s] $primary-dimension [m] $primary-dimension [e] 100px;
+  grid-template-columns: 100px [s] $primary-dimension [m1] 1fr [m2] $primary-dimension [e]100px;
   gap: 50px;
 
   .primary {
@@ -52,7 +54,7 @@
     grid-column: m1/e;
     align-items: center;
 
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: 600;
     color: $primary-color;
   }
@@ -75,14 +77,14 @@
     align-items: center;
     color: $font-color;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.2vw;
   }
 }
 
 .about-me--image {
   justify-self: center;
-  width: 600px;
-  height: 600px;
+  width: $primary-dimension;
+  height: $primary-dimension;
   object-fit: cover;
 
   border-radius: 1.5rem;

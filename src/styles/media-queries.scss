@@ -1,0 +1,35 @@
+@media screen and (max-width: 700px) {
+  $primary-dimension: 60vw;
+
+  .about-me {
+    grid-template-rows: 20px [image-s] $primary-dimension [image-e intro-s] max-content [intro-e secondary-s] $primary-dimension [secondary-e info-s] max-content [info-e] 20px;
+    grid-template-columns: 20px [s] 1fr [e] 20px;
+    gap: 30px;
+
+    .primary {
+      grid-column: s/e;
+      grid-row: image-s/image-e;
+    }
+    .secondary {
+      grid-column: s/e;
+      grid-row: secondary-s/secondary-e;
+    }
+
+    &--intro {
+      grid-row: intro-s/intro-e;
+      grid-column: s/e;
+      font-size: 1.5rem;
+    }
+
+    .about-me--image {
+      width: $primary-dimension;
+      height: $primary-dimension;
+    }
+
+    .copy {
+      grid-column: s/e;
+      grid-row: info-s/info-e;
+      font-size: 1rem;
+    }
+  }
+}

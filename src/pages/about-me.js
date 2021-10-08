@@ -61,18 +61,18 @@ const AboutMe = () => {
         </div>
         <div className="about-me--text-wrapper copy">
           <div className="about-me--text">
-            I completed my undergraduate and graducate degrees and licensing in
+            I completed my undergraduate and graduate degrees and licensing in
             architecture and worked in that field for half a decade before
             coming to a realization. Rather than pondering on buildings, I found
             myself spending all my free time teaching myself how to code and
             working on programming projects. I was drawn to coding for many of
             the same reasons as architecture, design, creative problem solving,
-            working within limitations. I decided it was time to make a change
-            and pursue my passion.
+            and working within limitations to meet a goal. I decided it was time
+            to make a change and pursue my passion.
             <br />
             <br />I recently completed a boot camp through Bottega University,
-            and I am currently looking for a junior position. I am excited to
-            bring value through my unique experiences as an architect turned
+            and I am currently looking to enter the field. I am excited to bring
+            value through my unique experiences as an architect turned
             developer.
             {/* realizing that all my side projects were
             all coding related. I realized that my true passion was coding and I
