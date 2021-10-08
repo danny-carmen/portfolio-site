@@ -1,9 +1,9 @@
 @media screen and (max-width: 700px) {
   $primary-dimension: 75vw;
-
   .about-me {
+    width: 100%;
     grid-template-rows: 20px [image-s] $primary-dimension [image-e intro-s] max-content [intro-e secondary-s] $primary-dimension [secondary-e info-s] max-content [info-e] 20px;
-    grid-template-columns: 20px [s] $primary-dimension [e] 20px;
+    grid-template-columns: 1fr [s] $primary-dimension [e] 1fr;
     gap: 30px;
 
     .primary {
@@ -37,6 +37,7 @@
     height: 100%;
     display: grid;
     grid-template-rows: [navbar-s] 7vw [navbar-e content-s] 1fr [content-e];
+    grid-template-columns: [s] 1fr [e];
     overflow-x: hidden;
   }
 
@@ -47,7 +48,7 @@
     top: 0;
     width: 100vw;
     height: 7vw;
-    z-index: 1;
+    z-index: 3;
   }
 
   .nav-bar {
@@ -55,37 +56,153 @@
     height: 100%;
     width: 100%;
     display: flex;
-    //   border-right: 1px solid $primary-color;
 
-    //   padding-left: 30px;
-    // margin-left: -18px;
     flex-direction: row;
-    z-index: 1;
-    font-size: 7vw;
-    margin-bottom: -4px;
-
-    //   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    font-size: 2rem;
 
     &--link {
       writing-mode: horizontal-tb;
       margin-bottom: 0px;
       transform: none;
       line-height: 0;
-      z-index: 1;
-      // margin-right: -14px;
+      z-index: 3;
       padding-top: 20px;
       padding-bottom: 20px;
       text-decoration: none;
-      // border-radius: 0px 8px 8px 0px;
+
       color: white;
     }
 
     &--link-selected {
       background-color: white;
       color: $primary-color;
-      // border-left: 1px solid $primary-color;
-
-      // box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
     }
+  }
+
+  ////////////Projects
+  .projects-page {
+    grid-row: content-s/content-e;
+    display: flex;
+    width: 1fr;
+    //   background-color: lightgray;
+    background-color: white;
+    position: relative;
+    height: 100%;
+    overflow-y: hidden;
+    width: 100%;
+    justify-items: center;
+    flex-direction: column;
+  }
+
+  .background-image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .projects-wrapper {
+    z-index: 1;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  .project {
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    //   background-color: lightgray;
+    //   border: 1px solid $primary-color;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: initial;
+    width: $primary-dimension;
+    display: grid;
+    grid-template-columns: [s] $primary-dimension [e];
+    grid-template-rows: [img-s] $primary-dimension [img-e info-s] 700px [info-e];
+    color: $font-color;
+    font-size: 1.25rem;
+
+    &--image {
+      grid-row: img-s/img-e;
+      grid-column: s/e;
+      height: $primary-dimension;
+      width: $primary-dimension;
+      border-radius: 1.5rem 1.5rem 0px 0px;
+
+      object-fit: fill;
+    }
+
+    &--info-wrapper {
+      grid-row: info-s/info-e;
+      grid-column: s/e;
+      row-gap: 20px;
+      display: grid;
+      height: $primary-dimension;
+      background-color: transparent;
+      grid-template-rows: [top name-s] 1fr [name-e links-s] 1fr [link-e description-s] 4fr [description-e language-s] min-content [language-e bottom];
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    &--name {
+      font-size: 1.5rem;
+      margin-top: 1vw;
+    }
+    &--description {
+      align-content: center;
+      align-self: center;
+      text-align: justify;
+    }
+    &--github {
+      margin-right: 20px;
+    }
+
+    &--links {
+      display: flex;
+    }
+
+    &--icons {
+      grid-column: img-s/img-e;
+      grid-row: top/bottom;
+      align-self: flex-start;
+      justify-self: flex-end;
+      z-index: 1;
+    }
+    &--languages {
+      margin-bottom: 30px;
+    }
+  }
+
+  .project--link {
+    height: 2rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    background-color: $font-color;
+    line-height: 2rem;
+    color: lightgray;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .link-divider-line {
+    border-right: 2px solid gray;
+    height: 2.5rem;
+    width: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="sticky-wrapper">
       <div className="nav-bar-wrapper">
         <div className="nav-bar">
           <NavLink
