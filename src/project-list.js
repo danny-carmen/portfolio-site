@@ -43,7 +43,7 @@ export const bottegaPortfolio = {
         images and information were provided by the bootcamp`,
   image: bottegaportfolioImage,
   github: "https://github.com/danny-carmen/react-portfolio",
-  link: "https://ddc-tastable.herokuapp.com/",
+  link: "https://ddc-bottega-react-portfolio.herokuapp.com/",
   linkName: "React Portfolio",
   languages: ["React", "JS", "SCSS", "API Requests"],
   backgroundImage: bottegaPortfolioBackground,
