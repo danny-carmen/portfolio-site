@@ -56,46 +56,23 @@ const AboutMe = () => {
             Hi, I'm Danny.
             <br />
             Architect turned software developer <br />
-            based in Salt Lake City, Utah
+            based in Salt Lake City, Utah.
           </div>
         </div>
         <div className="about-me--text-wrapper copy">
           <div className="about-me--text">
-            I completed my undergraduate and graduate degrees and licensing in
-            architecture and worked in that field for half a decade before
-            coming to a realization. Rather than pondering on buildings, I found
-            myself spending all my free time teaching myself how to code and
-            working on programming projects. I was drawn to coding for many of
-            the same reasons as architecture, design, creative problem solving,
-            and working within limitations to meet a goal. I decided it was time
-            to make a change and pursue my passion.
+            After becoming a licensed architect and working in the field for six
+            years, I came to a realization: Rather than thinking about
+            buildings, I found myself spending all my free time teaching myself
+            how to code and working on programming projects. I was drawn to
+            coding for many of the same reasons as architecture: design,
+            creative problem solving, and working within limitations to meet a
+            goal. I decided it was time to change careers and pursue my passion.
             <br />
             <br />I recently completed a boot camp through Bottega University,
-            and I am currently looking to enter the field. I am excited to bring
-            value through my unique experiences as an architect turned
-            developer.
-            {/* realizing that all my side projects were
-            all coding related. I realized that my true passion was coding and I
-            needed to make a change. projects I realized that my true passion is
-            coding. As a licensed architect, instead of thinking about
-            buildings, I found myself spending all my free time teaching myself
-            how to code. On the bus, late into the night, and early in the
-            mornings, I loved … After building an app and a plugin, I realized
-            my passion was in coding, and so I decided to leave architecture and
-            pursue a career in software development. I recently completed a boot
-            camp through Bottega University, and I am currently looking for a
-            junior position. I am excited to bring value through my unique
-            experiences as an architect turned coder. I am a new software
-            developer, previously an architect. In my career as an architect, I
-            have worked on and managed projects ranging from multifamily
-            housing, historic preservation, government and municipal buildings,
-            religious and even an arena. While in the architecture field I rose
-            up from basic drafting to project management to being in charge of
-            production technology and documenting and enforcing standards for
-            the company.I am good at jumping into a project and coming up to
-            speed. Time management, communication skills, and office culture. I
-            love learning, putting pieces together, love working within
-            constraints, clean coding, learning what that means. */}
+            and I am currently looking to enter the field as a full stack
+            developer. I am excited to bring value to your company through my
+            unique experiences as an architect turned developer.
           </div>
         </div>
         <img

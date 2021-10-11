@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [opaque, startFadeIn] = useState(false);
@@ -27,6 +28,14 @@ const Contact = () => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
+        <Link
+          className="contact-page--resume"
+          to="./DannyCarmenResume.pdf"
+          download
+          target="_blank"
+        >
+          View Resume
+        </Link>
       </div>
     </div>
   );
