@@ -11,12 +11,14 @@ const Project = (props) => {
       {/* <Icons className="project--icons" icons={props.project.icons} /> */}
       <div className="project--info-wrapper">
         <div className="project--name">{props.project.name}</div>
+        <div className="project--date">{props.project.date}</div>
         <div className="project--links">
           {props.project.github ? (
             <a
               className="project--link"
               href={props.project.github}
               target="_blank"
+              rel="noreferrer"
             >
               Github Repository
             </a>
@@ -28,6 +30,7 @@ const Project = (props) => {
             className="project--link"
             href={props.project.link}
             target="_blank"
+            rel="noreferrer"
           >
             {`Visit ${props.project.linkName}`}
           </a>

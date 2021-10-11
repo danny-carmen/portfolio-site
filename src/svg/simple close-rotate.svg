@@ -16,15 +16,16 @@
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
 <metadata>
-	<variableSets  xmlns="&ns_vars;">
+	<variableSets  xmlns="http://ns.adobe.com/Variables/1.0/">
 		<variableSet  locked="none" varSetName="binding1">
 			<variables></variables>
-			<v:sampleDataSets  xmlns:v="&ns_vars;" xmlns="&ns_custom;"></v:sampleDataSets>
+			<v:sampleDataSets  xmlns:v="http://ns.adobe.com/Variables/1.0/" xmlns="http://ns.adobe.com/GenericCustomNamespace/1.0/">
+				</v:sampleDataSets>
 		</variableSet>
 	</variableSets>
 </metadata>
-<g id="Layer_1" i:layer="yes" i:dimmedPercent="50" i:rgbTrio="#4F008000FFFF">
-	<path i:knockout="Off" d="M29.234,308.243L312.076,25.4l58.689,58.689L87.923,366.933 M87.59,25.4l282.843,282.842l-58.69,58.689
-		L28.9,84.09 M29.234,308.242L312.076,25.4l58.69,58.689L87.923,366.933"/>
+<g id="Layer_1" i:knockout="Off" i:layer="yes" i:dimmedPercent="50" i:rgbTrio="#4F008000FFFF">
+	<path d="M64.527,348.998L263.453,1.97l72.007,41.277L136.535,390.275 M46.797,60.743l347.027,198.925l-41.276,72.007L5.52,132.751
+		 M64.527,348.997L263.453,1.97l72.008,41.276L136.535,390.275"/>
 </g>
 </svg>

@@ -1,0 +1,20 @@
+<svg width="300" height="300" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+	<path fill="none" stroke="#000000" stroke-width="100" stroke-linecap="round" stroke-miterlimit="10" d="M350,50L50,50 M350,350L50,350 M350,200L50,350">
+<animate dur="1s" 
+         repeatCount="indefinite" 
+         attributeName="d" 
+         
+         values="
+                 
+                M350,50L50,50 M350,350L50,350 M350,200L50,200
+            ;
+                 M350,200L50,200 M350,200L50,200 M350,200L50,200;
+                 M350,50	L50,350 M350,350L50,50 M350,350L50,50
+            ;M350,200L50,200 M350,200L50,200 M350,200L50,200;M350,50L50,50 M350,350L50,350 M350,200L50,200;" 
+         
+         fill="freeze"
+         
+      calcMode="spline"
+      keySplines="1 1 1 1; 1 1 1 1;1 1 1 1;1 1 1 1">
+  </path>
+</svg>

@@ -39,13 +39,10 @@ const Projects = () => {
         projectScroll.scrollTop / scrollDivision
       );
 
-      console.log(scrollIndexPosition);
-
       if (
         scrollIndexPosition !== image1Index &&
         scrollIndexPosition < backgroundImages.length - 1
       ) {
-        console.log("Changed Image");
         setImage1Index(scrollIndexPosition);
         setImage2Index(scrollIndexPosition + 1);
       }
