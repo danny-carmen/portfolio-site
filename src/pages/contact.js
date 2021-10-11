@@ -22,10 +22,10 @@ const Contact = () => {
         <a href="mailto: danny.carmen@outlook.com">danny.carmen@outlook.com</a>
         <div className="contact-page--links">
           <a href="https://www.linkedin.com/in/danny-carmen-62b87a84/">
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faLinkedin} target="_blank" />
           </a>
           <a href="https://github.com/danny-carmen">
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} target="_blank" />
           </a>
         </div>
         <Link
