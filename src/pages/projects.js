@@ -12,7 +12,7 @@ const Projects = () => {
   const backgroundImages = [];
 
   const [opaque, startFadeIn] = useState(false);
-  const projects = [measureCalc, setBuilder, bottegaPortfolio, tastable];
+  const projects = [tastable, bottegaPortfolio, setBuilder, measureCalc];
   const projectList = projects.map((project, idx) => {
     backgroundImages.push(project.backgroundImage);
     return <Project key={idx} project={project} />;
