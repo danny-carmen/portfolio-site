@@ -34,7 +34,7 @@ const Contact = () => {
           download
           target="_blank"
         >
-          View Resume
+          Download Resume
         </Link>
       </div>
     </div>
