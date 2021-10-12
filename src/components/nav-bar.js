@@ -30,13 +30,13 @@ const NavBar = () => {
             Contact
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             className="nav-bar--link"
             activeClassName="nav-bar--link-selected"
             to="/blog"
           >
             Blog
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
       <div></div>
