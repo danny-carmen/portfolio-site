@@ -29,6 +29,14 @@ const NavBar = () => {
           >
             Contact
           </NavLink>
+
+          <NavLink
+            className="nav-bar--link"
+            activeClassName="nav-bar--link-selected"
+            to="/blog"
+          >
+            Blog
+          </NavLink>
         </div>
       </div>
       <div></div>
