@@ -1,0 +1,102 @@
+.blog-page {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  grid-template-rows: [top title-s] 100px [title-e subtitle-s] 50px [subtitle-e blogposts-s] 1fr [blogposts-e buttons-s] min-content [buttons-e bottom] 10px;
+  color: $font-color;
+}
+
+.blog-posts-wrapper {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+
+  grid-row: blogposts-s/blogposts-e;
+}
+
+.blog-page--title {
+  align-self: center;
+  font-size: 3rem;
+  height: min-content;
+  grid-row: title-s/title-e;
+}
+
+.blog-page--subtitle {
+  height: min-content;
+  align-self: center;
+  font-size: 1.5rem;
+  grid-row: subtitle-s/subtitle-e;
+}
+
+.blog-post-summary {
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: 55px;
+  overflow: hidden;
+  width: 75vw;
+  display: grid;
+  grid-template-rows: [title-s] max-content [title-e content-s] 1.25rem [content-e readmore-s] min-content [readmore-e];
+  grid-template-columns: [s] 1fr [e];
+  transition: all 0.2s ease;
+  // opacity: 100;
+}
+
+.blog-post {
+  &--title {
+    font-size: 1.5rem;
+    grid-row: title-s/title-e;
+    grid-column: s/e;
+  }
+
+  &--content-closed {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+    overflow: hidden;
+  }
+
+  &--content-open {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+    overflow: hidden;
+  }
+
+  &--read-more {
+    // align-self: flex-end;
+    // justify-self: flex-end;
+    grid-row: readmore-s/readmore-e;
+    grid-column: s/e;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+.blog-posts-buttons {
+  display: flex;
+  align-items: center;
+  grid-row: buttons-s/buttons-e;
+
+  button {
+    height: 30px;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    border: none;
+    background-color: $font-color;
+    // line-height: 30px;
+    color: lightgray;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 15px;
+  }
+
+  .inactive {
+    visibility: hidden;
+  }
+}

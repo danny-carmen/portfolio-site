@@ -4,6 +4,7 @@ import NavBar from "./components/nav-bar";
 import AboutMe from "./pages/about-me";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
+import Blog from "./pages/blog";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/projects" component={Projects} />
             <Route exact path="/" component={AboutMe} />
             <Route path="/contact" component={Contact} />
+            <Route path="/blog" component={Blog} />
           </Switch>
         </div>
       </Router>
