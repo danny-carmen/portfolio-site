@@ -4,6 +4,7 @@
 @import "./contact.scss";
 @import "./about-me.scss";
 @import "./projects.scss";
+@import "./blog.scss";
 
 html,
 body,
@@ -18,7 +19,7 @@ body,
 .main-grid {
   height: 100%;
   display: grid;
-  grid-template-columns: [navbar-s] max-content [navbar-e content-s] 1fr [content-e];
+  grid-template-columns: [content-s] 1fr [content-e];
   overflow-x: hidden;
   overflow-y: hidden;
 }
