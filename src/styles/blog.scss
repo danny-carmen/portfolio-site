@@ -4,17 +4,21 @@
   align-items: center;
   justify-items: center;
   width: 100%;
+  height: 100vh;
   grid-template-rows: [top title-s] 100px [title-e subtitle-s] 50px [subtitle-e blogposts-s] 1fr [blogposts-e buttons-s] min-content [buttons-e bottom] 10px;
   color: $font-color;
 }
 
 .blog-posts-wrapper {
   height: 100%;
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
+  align-items: center;
   grid-row: blogposts-s/blogposts-e;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .blog-page--title {
@@ -37,42 +41,93 @@
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
-  height: 55px;
+  height: 68px;
   overflow: hidden;
+  white-space: nowrap;
   width: 75vw;
   display: grid;
-  grid-template-rows: [title-s] max-content [title-e content-s] 1.25rem [content-e readmore-s] min-content [readmore-e];
+  grid-template-rows: [title-s] max-content [title-e content-s] 1fr [content-e];
   grid-template-columns: [s] 1fr [e];
-  transition: all 0.2s ease;
-  // opacity: 100;
-}
+  opacity: 1;
+  transition: all 0.35s ease;
 
-.blog-post {
-  &--title {
-    font-size: 1.5rem;
-    grid-row: title-s/title-e;
-    grid-column: s/e;
+  .blog-post {
+    &--title {
+      font-size: 1.5rem;
+      grid-row: title-s/title-e;
+      grid-column: s/e;
+    }
+
+    &--close-button {
+      grid-row: title-s/title-e;
+      grid-column: s/e;
+      align-self: flex-start;
+      justify-self: flex-end;
+      background-color: transparent;
+      outline: transparent;
+      border: transparent;
+      font-size: 1.75rem;
+
+      * {
+        color: $font-color;
+      }
+    }
+
+    &--content {
+      grid-row: content-s/content-e;
+      grid-column: s/e;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    &--read-more {
+      // align-self: flex-end;
+      // justify-self: flex-end;
+      grid-row: readmore-s/readmore-e;
+      grid-column: s/e;
+      background-color: white;
+      cursor: pointer;
+    }
   }
 
-  &--content-closed {
-    grid-row: content-s/content-e;
-    grid-column: s/e;
-    overflow: hidden;
+  .blog-post--close-button {
+    transform: rotate(45deg);
   }
 
-  &--content-open {
-    grid-row: content-s/content-e;
-    grid-column: s/e;
-    overflow: hidden;
+  * {
+    opacity: 1;
+    transition: all 0.35s ease;
   }
 
-  &--read-more {
-    // align-self: flex-end;
-    // justify-self: flex-end;
-    grid-row: readmore-s/readmore-e;
-    grid-column: s/e;
-    background-color: white;
-    cursor: pointer;
+  &--hidden {
+    opacity: 0;
+    box-shadow: none;
+
+    * {
+      opacity: 0;
+    }
+  }
+
+  &--closed {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  &--opened {
+    height: 100%;
+    white-space: normal;
+    overflow: visible;
+    overflow-y: hidden;
+
+    .blog-post--close-button {
+      transform: none;
+    }
+
+    .blog-post--content {
+      overflow-y: scroll;
+    }
   }
 }
 

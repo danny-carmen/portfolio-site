@@ -12,6 +12,7 @@ const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPosts, setTotalPosts] = useState(0);
   const [selectedPost, setSelectedPost] = useState(null);
+  const [openedPost, setOpenedPost] = useState(null);
   const postsPerPage = 5;
 
   const retrievePosts = () => {
@@ -37,17 +38,30 @@ const Blog = () => {
 
   const handlePostOpenClick = (postUrl) => {
     setSelectedPost(postUrl);
+
+    setTimeout(() => {
+      setOpenedPost(postUrl);
+    }, 350);
   };
 
-  const handlePostCloseClick = (postUrl) => {
-    setSelectedPost(null);
+  const handlePostCloseClick = () => {
+    setOpenedPost(null);
+    setTimeout(() => {
+      setSelectedPost(null);
+    }, 350);
   };
   const blogPosts = shownBlogPosts.map((blogPost, idx) => {
     return (
       <BlogPostSummary
         key={idx}
         title={blogPost.description}
-        visible={true}
+        visible={
+          selectedPost === null ||
+          selectedPost === blogPost.files["gistfile1.txt"].raw_url
+            ? true
+            : false
+        }
+        opened={openedPost !== null}
         postUrl={blogPost.files["gistfile1.txt"].raw_url}
         handlePostOpen={handlePostOpenClick}
         handlePostClose={handlePostCloseClick}
