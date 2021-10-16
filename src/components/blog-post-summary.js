@@ -48,7 +48,7 @@ const BlogPostSummary = (props) => {
           <FontAwesomeIcon icon={faTimes} />
         </button>
 
-        <ReactMarkdown className="blog-post--content">
+        <ReactMarkdown className="blog-post--contents">
           {summarizedPost}
         </ReactMarkdown>
         {/* {props.opened ? null : (
