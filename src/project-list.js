@@ -55,11 +55,19 @@ export const tastable = {
   description: `After completing the bootcamp coursework, I was required to create a full stack project to demonstrate what I had 
   learned and apply a technique or feature that was not taught in the course. I chose to make Tastable, a recipe site where users 
   can upload their recipes and view recipes created by others. The front-end was created in React. I taught myself how to use Node.js 
-  to build the backend. I also learned how implement user authentification and host images on AWS S3, which were also not taught in the course.`,
+  to build the backend, and used MongoDB Atlas as the database. I also learned how implement user authentication and host images on AWS S3, which were also not taught in the course.`,
   image: tastableImage,
   github: "https://github.com/danny-carmen/capstone-recipe-site",
   link: "https://ddc-tastable.herokuapp.com/",
   linkName: "Tastable",
-  languages: ["React", "JS", "SCSS", "Node", "User Authentication, AWS S3"],
+  languages: [
+    "React",
+    "JS",
+    "SCSS",
+    "Node",
+    "User Authentication",
+    "MongoDB",
+    "AWS S3",
+  ],
   backgroundImage: tastableBackground,
 };
