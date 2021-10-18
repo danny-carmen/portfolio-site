@@ -51,16 +51,6 @@ const BlogPostSummary = (props) => {
         <ReactMarkdown className="blog-post--content">
           {summarizedPost}
         </ReactMarkdown>
-        {/* {props.opened ? null : (
-          <div
-            className="blog-post--read-more"
-            onClick={() => {
-              props.handlePostOpen(props.postUrl);
-            }}
-          >
-            Open Post...
-          </div>
-        )} */}
       </div>
     );
   } else {

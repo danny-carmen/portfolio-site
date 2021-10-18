@@ -11,19 +11,44 @@
   position: absolute;
   z-index: 20;
   top: 0;
-  width: 75px;
-  height: 75px;
+  width: 40px;
+  height: 40px;
   color: $primary-color;
-  margin: 30px;
+  padding: 10px;
+  margin: 10px;
+  transition: all 0.3s ease;
+  // -webkit-transition: all 0.3s ease;
 
   svg {
+    -webkit-filter: drop-shadow(0px 0px 1px transparent);
+    filter: drop-shadow(0px 0px 1px transparent);
     pointer-events: none;
+    transition: all 0.3 ease;
+    // -webkit-transition: all 0.3s ease;
     path {
+      transition: all 0.3 ease;
+      // -webkit-transition: all 0.3s ease;
       pointer-events: auto;
       stroke: $primary-color;
       stroke-opacity: 1;
       fill: $primary-color;
     }
+  }
+
+  &--open {
+    svg {
+      path {
+        stroke: white;
+        color: white;
+      }
+    }
+  }
+}
+
+.hamburger-icon:hover {
+  svg {
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
   }
 }
 
@@ -42,17 +67,20 @@
   align-items: center;
   justify-content: space-evenly;
   font-size: 2rem;
+  transition: all 0.3s ease;
 
   &--link {
     margin-left: 40px;
     margin-right: 40px;
+    width: 100%;
+    text-align: center;
     // writing-mode: vertical-rl;
 
     // transform: rotateZ(180deg);
     text-transform: uppercase;
     line-height: 40px;
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     // margin-right: -14px;
     padding-top: 20px;
@@ -62,15 +90,20 @@
     color: white;
   }
 
+  &--link:hover {
+    background-color: $hover-color;
+  }
+
   &--link-selected {
-    background-color: white;
-    color: $primary-color;
+    background-color: $select-color;
+    // color: $primary-color;
     // border-left: 1px solid $primary-color;
 
     // box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
   }
 
   &--closed {
+    transform: translateX(-100%);
     opacity: 0;
     filter: blur(20px);
   }

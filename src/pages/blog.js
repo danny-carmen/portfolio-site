@@ -13,7 +13,7 @@ const Blog = () => {
   const [totalPosts, setTotalPosts] = useState(0);
   const [selectedPost, setSelectedPost] = useState(null);
   const [openedPost, setOpenedPost] = useState(null);
-  const postsPerPage = 5;
+  const postsPerPage = 4;
 
   const retrievePosts = () => {
     axios
@@ -88,7 +88,6 @@ const Blog = () => {
               : null
           }
           onClick={() => {
-            console.log(currentPage);
             if (currentPage < totalPosts / postsPerPage) {
               setCurrentPage(currentPage + 1);
             }
@@ -102,7 +101,6 @@ const Blog = () => {
         <button
           className={currentPage <= 1 ? "inactive" : null}
           onClick={() => {
-            console.log(currentPage);
             if (currentPage > 1) {
               setCurrentPage(currentPage - 1);
             }
