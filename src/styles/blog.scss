@@ -31,17 +31,18 @@
 .blog-page--subtitle {
   height: min-content;
   align-self: center;
+  text-align: center;
   font-size: 1.5rem;
   grid-row: subtitle-s/subtitle-e;
 }
 
 .blog-post-summary {
-  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.1);
   border-radius: 1.5rem;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
-  height: 68px;
+  height: 85px;
   overflow: hidden;
   white-space: nowrap;
   width: 75vw;
@@ -78,7 +79,7 @@
       grid-column: s/e;
       overflow: hidden;
       width: 100%;
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
 
     &--read-more {

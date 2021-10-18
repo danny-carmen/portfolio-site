@@ -48,19 +48,9 @@ const BlogPostSummary = (props) => {
           <FontAwesomeIcon icon={faTimes} />
         </button>
 
-        <ReactMarkdown className="blog-post--contents">
+        <ReactMarkdown className="blog-post--content">
           {summarizedPost}
         </ReactMarkdown>
-        {/* {props.opened ? null : (
-          <div
-            className="blog-post--read-more"
-            onClick={() => {
-              props.handlePostOpen(props.postUrl);
-            }}
-          >
-            Open Post...
-          </div>
-        )} */}
       </div>
     );
   } else {

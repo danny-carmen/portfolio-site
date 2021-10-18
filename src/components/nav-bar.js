@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import HamburgerIcon from "./hamburger-icon";
 
@@ -20,6 +20,7 @@ const NavBar = () => {
         handleHamburgerClick={() => {
           handleHamburgerClick();
         }}
+        navBarOpen={navBarOpen}
       />
       <div className={navBarOpen ? "nav-bar" : "nav-bar nav-bar--closed"}>
         <NavLink
@@ -27,6 +28,7 @@ const NavBar = () => {
           activeClassName="nav-bar--link-selected"
           exact
           to="/"
+          onClick={() => setNavBarOpen(false)}
         >
           Home
         </NavLink>
@@ -34,24 +36,25 @@ const NavBar = () => {
           className="nav-bar--link"
           activeClassName="nav-bar--link-selected"
           to="/projects"
+          onClick={() => setNavBarOpen(false)}
         >
           Projects
         </NavLink>
-
-        <NavLink
-          className="nav-bar--link"
-          activeClassName="nav-bar--link-selected"
-          to="/contact"
-        >
-          Contact
-        </NavLink>
-
         <NavLink
           className="nav-bar--link"
           activeClassName="nav-bar--link-selected"
           to="/blog"
+          onClick={() => setNavBarOpen(false)}
         >
           Blog
+        </NavLink>
+        <NavLink
+          className="nav-bar--link"
+          activeClassName="nav-bar--link-selected"
+          to="/contact"
+          onClick={() => setNavBarOpen(false)}
+        >
+          Contact
         </NavLink>
       </div>
     </div>
