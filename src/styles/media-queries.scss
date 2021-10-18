@@ -222,41 +222,41 @@
   .contact-page {
     font-size: 1.5rem;
   }
-}
 
-.hamburger-icon {
-  width: 25px;
-  height: 25px;
-  padding: 5px;
-  margin: 5px;
-}
-
-.blog-page--title {
-  font-size: 2rem;
-}
-
-.blog-page--subtitle {
-  font-size: 1.25rem;
-}
-
-.blog-post-summary {
-  width: 80vw;
-
-  .blog-post {
-    &--title {
-      font-size: 1.25rem;
-    }
-
-    &--close-button {
-      font-size: 1.5rem;
-    }
-
-    &--content {
-      font-size: 1rem;
-    }
+  .hamburger-icon {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;
   }
 
-  .blog-page {
-    grid-template-rows: [top title-s] 60px [title-e subtitle-s] 50px [subtitle-e blogposts-s] 1fr [blogposts-e buttons-s] min-content [buttons-e bottom] 10px;
+  .blog-page--title {
+    font-size: 2rem;
+  }
+
+  .blog-page--subtitle {
+    font-size: 1.25rem;
+  }
+
+  .blog-post-summary {
+    width: 80vw;
+
+    .blog-post {
+      &--title {
+        font-size: 1.25rem;
+      }
+
+      &--close-button {
+        font-size: 1.5rem;
+      }
+
+      &--content {
+        font-size: 1rem;
+      }
+    }
+
+    .blog-page {
+      grid-template-rows: [top title-s] 60px [title-e subtitle-s] 50px [subtitle-e blogposts-s] 1fr [blogposts-e buttons-s] min-content [buttons-e bottom] 10px;
+    }
   }
 }
