@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import ProfilePic from "../images/profile-pic-notext.jpg";
 import SecondaryProfile from "../images/secondary-about-me.jpg";
-import ArchBackground from "../images/arch-background.jpg";
+import ArchBackground from "../images/arch-background-compressed.jpg";
 import CodeBackground from "../images/code-background.jpg";
 
 const AboutMe = () => {
@@ -62,7 +62,7 @@ const AboutMe = () => {
         <div className="about-me--text-wrapper copy">
           <div className="about-me--text">
             After becoming a licensed architect and working in the field for six
-            years, I came to a realization: Rather than thinking about
+            years, I came to a realization: Rather than pondering about
             buildings, I found myself spending all my free time teaching myself
             how to code and working on programming projects. I was drawn to
             coding for many of the same reasons as architecture: design,

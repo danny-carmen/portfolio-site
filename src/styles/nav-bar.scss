@@ -1,36 +1,83 @@
 .nav-bar-wrapper {
-  grid-column: navbar-s/navbar-e;
-  position: sticky;
-  position: -webkit-sticky;
-  justify-content: center;
+  position: absolute;
+  z-index: 10;
+
   top: 0;
-  background-color: $primary-color;
-  align-items: center;
-  height: 100vh;
+
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.hamburger-icon {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  color: $primary-color;
+  padding: 10px;
+  margin: 10px;
+  transition: all 0.3s ease;
+
+  svg {
+    -webkit-filter: drop-shadow(0px 0px 1px transparent);
+    filter: drop-shadow(0px 0px 1px transparent);
+    pointer-events: none;
+    transition: all 0.3 ease;
+    path {
+      transition: all 0.3 ease;
+      pointer-events: auto;
+      stroke: $primary-color;
+      stroke-opacity: 1;
+      fill: $primary-color;
+    }
+  }
+
+  &--open {
+    svg {
+      path {
+        stroke: white;
+        color: white;
+      }
+    }
+  }
+}
+
+.hamburger-icon:hover {
+  svg {
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.black-box {
+  background-color: black;
+  width: 200px;
+  height: 200px;
 }
 
 .nav-bar {
-  height: 100%;
+  height: 100vh;
   display: flex;
-  //   border-right: 1px solid $primary-color;
+  background-color: $primary-color;
 
-  //   padding-left: 30px;
-  // margin-left: -18px;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-evenly;
   font-size: 2rem;
-  margin-left: -4px;
-  //   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 
   &--link {
-    writing-mode: vertical-rl;
-    margin-right: 0px;
-    transform: rotateZ(180deg);
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 100%;
+    text-align: center;
+    // writing-mode: vertical-rl;
+
+    // transform: rotateZ(180deg);
     text-transform: uppercase;
     line-height: 40px;
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     // margin-right: -14px;
     padding-top: 20px;
@@ -40,11 +87,21 @@
     color: white;
   }
 
+  &--link:hover {
+    background-color: $hover-color;
+  }
+
   &--link-selected {
-    background-color: white;
-    color: $primary-color;
+    background-color: $select-color;
+    // color: $primary-color;
     // border-left: 1px solid $primary-color;
 
     // box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &--closed {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(20px);
   }
 }
