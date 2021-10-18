@@ -17,17 +17,17 @@
   padding: 10px;
   margin: 10px;
   transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
+  // -webkit-transition: all 0.3s ease;
 
   svg {
     -webkit-filter: drop-shadow(0px 0px 1px transparent);
     filter: drop-shadow(0px 0px 1px transparent);
     pointer-events: none;
     transition: all 0.3 ease;
-    -webkit-transition: all 0.3s ease;
+    // -webkit-transition: all 0.3s ease;
     path {
       transition: all 0.3 ease;
-      -webkit-transition: all 0.3s ease;
+      // -webkit-transition: all 0.3s ease;
       pointer-events: auto;
       stroke: $primary-color;
       stroke-opacity: 1;
