@@ -6,7 +6,6 @@ const HamburgerIcon = (props) => {
   const isInitialized = useRef(false);
 
   useEffect(() => {
-    debugger;
     if (isInitialized.current) {
       if (!props.navBarOpen) {
         toHamburgerAnimationRef.current.beginElement();

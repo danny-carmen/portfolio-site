@@ -88,7 +88,6 @@ const Blog = () => {
               : null
           }
           onClick={() => {
-            console.log(currentPage);
             if (currentPage < totalPosts / postsPerPage) {
               setCurrentPage(currentPage + 1);
             }
@@ -102,7 +101,6 @@ const Blog = () => {
         <button
           className={currentPage <= 1 ? "inactive" : null}
           onClick={() => {
-            console.log(currentPage);
             if (currentPage > 1) {
               setCurrentPage(currentPage - 1);
             }

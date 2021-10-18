@@ -6,7 +6,6 @@ const NavBar = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
 
   const handleHamburgerClick = () => {
-    console.log("Clicked the thing!");
     if (navBarOpen) {
       setNavBarOpen(false);
     } else {
