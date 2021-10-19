@@ -30,9 +30,9 @@ const HamburgerIcon = (props) => {
     >
       <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
         <path
-          stroke-width="100"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
+          strokeWidth="100"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
           d="M350,50L50,50 M350,350L50,350 M350,200L50,200"
         >
           <animate

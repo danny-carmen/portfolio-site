@@ -7,14 +7,16 @@ import ReactMarkdown from "react-markdown";
 const BlogPostSummary = (props) => {
   const [summarizedPost, setSummarizedPost] = useState("");
   let className = "blog-post-summary";
+
+  const { title, postUrl } = props;
   useEffect(() => {
     axios
-      .get(props.postUrl)
+      .get(postUrl)
       .then((res) => {
         setSummarizedPost(res.data);
       })
       .catch((err) => console.log(err));
-  }, [props.title]);
+  }, [title, postUrl]);
 
   if (props.visible && !props.opened) {
     className = "blog-post-summary";
@@ -38,11 +40,9 @@ const BlogPostSummary = (props) => {
         <button
           className="blog-post--close-button"
           onClick={() => {
-            {
-              props.opened
-                ? props.handlePostClose()
-                : props.handlePostOpen(props.postUrl);
-            }
+            props.opened
+              ? props.handlePostClose()
+              : props.handlePostOpen(props.postUrl);
           }}
         >
           <FontAwesomeIcon icon={faTimes} />

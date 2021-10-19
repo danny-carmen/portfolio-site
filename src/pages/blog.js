@@ -3,11 +3,6 @@ import axios from "axios";
 import BlogPostSummary from "../components/blog-post-summary";
 
 const Blog = () => {
-  //get blogposts
-
-  //ten at a time
-
-  //
   const [shownBlogPosts, setShownBlogPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPosts, setTotalPosts] = useState(0);
@@ -15,10 +10,10 @@ const Blog = () => {
   const [openedPost, setOpenedPost] = useState(null);
   const postsPerPage = 4;
 
-  const retrievePosts = () => {
+  const retrievePosts = (pageNumber) => {
     axios
       .get(
-        `https://api.github.com/users/danny-carmen/gists?per_page=${postsPerPage}&page=${currentPage}`
+        `https://api.github.com/users/danny-carmen/gists?per_page=${postsPerPage}&page=${pageNumber}`
       )
       .then((res) => {
         setShownBlogPosts(res.data);
@@ -33,8 +28,8 @@ const Blog = () => {
         setTotalPosts(res.data.length);
       })
       .catch((err) => console.log(err));
-    retrievePosts();
-  }, []);
+    retrievePosts(currentPage);
+  }, [currentPage]);
 
   const handlePostOpenClick = (postUrl) => {
     setSelectedPost(postUrl);
@@ -69,9 +64,11 @@ const Blog = () => {
     );
   });
 
-  useEffect(() => {
-    retrievePosts();
-  }, [currentPage]);
+  const changeBlogPage = (pageNumber) => {
+    setCurrentPage(pageNumber);
+
+    retrievePosts(pageNumber);
+  };
 
   return (
     <div className="blog-page">
@@ -89,7 +86,7 @@ const Blog = () => {
           }
           onClick={() => {
             if (currentPage < totalPosts / postsPerPage) {
-              setCurrentPage(currentPage + 1);
+              changeBlogPage(currentPage + 1);
             }
           }}
         >
@@ -102,7 +99,7 @@ const Blog = () => {
           className={currentPage <= 1 ? "inactive" : null}
           onClick={() => {
             if (currentPage > 1) {
-              setCurrentPage(currentPage - 1);
+              changeBlogPage(currentPage - 1);
             }
           }}
         >
@@ -112,8 +109,5 @@ const Blog = () => {
     </div>
   );
 };
-
-//posts, shortened to certain length
-//button for earlier or later
 
 export default Blog;

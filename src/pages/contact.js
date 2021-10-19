@@ -18,7 +18,7 @@ const Contact = () => {
       }
     >
       <div className="contact-page">
-        <div className>Danny Carmen</div>
+        <div>Danny Carmen</div>
         <a href="mailto: danny.carmen@outlook.com">danny.carmen@outlook.com</a>
         <div className="contact-page--links">
           <a href="https://www.linkedin.com/in/danny-carmen-62b87a84/">
