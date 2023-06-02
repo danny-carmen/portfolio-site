@@ -56,23 +56,21 @@ const AboutMe = () => {
             Hi, I'm Danny.
             <br />
             Architect turned software developer <br />
-            based in Salt Lake City, Utah.
+            based in Lehi, Utah.
           </div>
         </div>
         <div className="about-me--text-wrapper copy">
           <div className="about-me--text">
             After becoming a licensed architect and working in the field for six
-            years, I came to a realization: Rather than pondering about
-            buildings, I found myself spending all my free time teaching myself
-            how to code and working on programming projects. I was drawn to
-            coding for many of the same reasons as architecture: design,
-            creative problem solving, and working within limitations to meet a
-            goal. I decided it was time to change careers and pursue my passion.
+            years, I found myself spending all my free time teaching myself how
+            to code and working on programming projects. I was drawn to coding
+            for many of the same reasons as architecture: design, creative
+            problem solving, and working within limitations to meet a goal. So I
+            decided to change careers to pursue my passion.
             <br />
-            <br />I recently completed a boot camp through Bottega University,
-            and I am currently looking to enter the field as a full stack
-            developer. I am excited to bring value to your company through my
-            unique experiences as an architect turned developer.
+            <br />I currently work as a full stack developer, and I am looking
+            for my next opportunity. I am excited to bring value to your company
+            through my unique experiences as an architect turned developer.
           </div>
         </div>
         <img
